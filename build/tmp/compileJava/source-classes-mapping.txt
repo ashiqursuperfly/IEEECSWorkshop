@@ -1,5 +1,8 @@
 strings/StringBuilders.java
  strings.StringBuilders
+threads/WorkerWithNoSharedResource.java
+ threads.ThreadDemo
+ threads.WorkerWithNoSharedResource
 collections/Movie.java
  collections.Movie
 strings/Strings.java
@@ -14,11 +17,12 @@ collections/HashDs.java
  collections.HashDs
 exceptions/CommonExceptions.java
  exceptions.CommonExceptions
-collections/Basic.java
- collections.Basic
 strings/StringImmutability.java
  strings.MyVeryImportantDatabase
  strings.StringImmutability
-threads/Worker.java
- threads.ThreadDemo
- threads.Worker
+collections/Basic.java
+ collections.Basic
+threads/WorkerWithSharedResource.java
+ threads.Progress
+ threads.ThreadSyncDemo
+ threads.WorkerWithSharedResource

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Worker implements Runnable {
+public class WorkerWithNoSharedResource implements Runnable {
 
     public Thread thread;
     public String id;
@@ -12,7 +12,7 @@ public class Worker implements Runnable {
 
     public int result;
 
-    public Worker(String id, List<Integer> data) {
+    public WorkerWithNoSharedResource(String id, List<Integer> data) {
         this.data = data;
         this.id = id;
         thread = new Thread(this);
@@ -54,17 +54,18 @@ class ThreadDemo {
 
         List<Integer> data = generateRandomArray(50000);
 
-        Worker [] workers = new Worker[5];
-        workers[0] = new Worker(0+"", data.subList(0, 10000));
-        workers[1] = new Worker(1+"", data.subList(10000, 20000));
-        workers[2] = new Worker(2+"", data.subList(20000, 30000));
-        workers[3] = new Worker(3+"", data.subList(30000, 40000));
-        workers[4] = new Worker(4+"", data.subList(40000, 50000));
+        WorkerWithNoSharedResource[] workers = new WorkerWithNoSharedResource[5];
+        for (int i = 0; i < 5; i++) {
+            workers[i] = new WorkerWithNoSharedResource(i+"", data.subList(i*10000, i*10000 + 10000));
+        }
 
         for (int i = 0; i < workers.length; i++) {
             workers[i].thread.start();
-            // workers[i].thread.join();
         }
+
+        /*for (int i = 0; i < workers.length; i++) {
+            workers[i].thread.join();
+        }*/
 
         System.out.println("Parallel Result:"+ (workers[0].result + workers[1].result + workers[2].result + workers[3].result + workers[4].result));
 
