@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
-public class Movie /*implements Comparable<Movie>*/{
+public class Movie implements Comparable<Movie> {
 
     private String name;
     private int releaseYear;
@@ -57,14 +57,12 @@ public class Movie /*implements Comparable<Movie>*/{
         return rating;
     }
 
-    /*
     @Override
     public int compareTo(Movie movie) {
         return Float.compare(movie.rating, rating);
     }
-    */
 
-    /*@Override
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
@@ -72,8 +70,9 @@ public class Movie /*implements Comparable<Movie>*/{
         return releaseYear == movie.releaseYear && Objects.equals(name, movie.name);
     }
 
+
     @Override
     public int hashCode() {
         return Objects.hash(name, releaseYear);
-    }*/
+    }
 }

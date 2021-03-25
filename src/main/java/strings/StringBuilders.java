@@ -10,8 +10,12 @@ public class StringBuilders {
 
         for (int i = 0; i < 5; i++) {
             Random r = new Random();
-            veryDynamicString.append((char) (Math.abs(r.nextInt()) % 26 + 65)).append('-');
+            veryDynamicString
+                    .append((char) (Math.abs(r.nextInt()) % 26 + 65))
+                    .append('-');
         }
+
+        System.out.println(veryDynamicString);
 
         veryDynamicString.deleteCharAt(veryDynamicString.length() - 1);
         System.out.println(veryDynamicString);

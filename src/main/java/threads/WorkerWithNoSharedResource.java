@@ -30,7 +30,7 @@ public class WorkerWithNoSharedResource implements Runnable {
                 e.printStackTrace();
             }*/
         }
-       // System.out.println("Thread:" + id + " Exited");
+        System.out.println("Thread:" + id + " Exited");
 
     }
 }
@@ -63,16 +63,20 @@ class ThreadDemo {
             workers[i].thread.start();
         }
 
-        /*for (int i = 0; i < workers.length; i++) {
-            workers[i].thread.join();
-        }*/
+        for (int i = 0; i < workers.length; i++) {
+            try {
+                workers[i].thread.join();
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
-        System.out.println("Parallel Result:"+ (workers[0].result + workers[1].result + workers[2].result + workers[3].result + workers[4].result));
 
         int result = 0;
         for (int i = 0; i < data.size(); i++) {
             result += data.get(i);
         }
+        System.out.println("Parallel Result:"+ (workers[0].result + workers[1].result + workers[2].result + workers[3].result + workers[4].result));
         System.out.println("Sequential Result:"+ result);
         System.out.println("End Of Main Thread Execution");
 

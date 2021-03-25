@@ -20,7 +20,6 @@ public class Strings {
         parts = s3.split("[0-9]+");
         System.out.println(Arrays.toString(parts));
 
-
         /* Why is this inefficient ? */
         String veryDynamicString = "";
         for (int i = 0; i < 5; i++) {

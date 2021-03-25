@@ -16,8 +16,6 @@ class InvalidPasswordLengthException extends Exception {
 
 class InvalidPasswordCharsException extends Exception {
 
-    private static final int MIN_ALLOWED_LENGTH = 6;
-
     public static boolean validate(String password) {
         if (password.contains("@") || password.contains("$")) return false;
         return true;
@@ -39,16 +37,13 @@ class PasswordValidator {
         if (!InvalidPasswordLengthException.validate(password)) throw new InvalidPasswordLengthException(password);
     }
 
-    /*
-    static void validatePassword(String password) {
+    static void validatePassword(String password) throws InvalidPasswordCharsException, InvalidPasswordLengthException{
         validatePasswordChars(password);
         validatePasswordLength(password);
     }
-    */
 
-
-    public static void main(String[] args) {
-        //validatePassword("2311@");
+    public static void main(String[] args) throws InvalidPasswordLengthException, InvalidPasswordCharsException {
+        validatePassword("2311@");
     }
 }
 

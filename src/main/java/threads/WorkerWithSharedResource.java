@@ -45,8 +45,8 @@ public class WorkerWithSharedResource implements Runnable {
             result += data.get(i);
 
             if (i % 3333 == 0) {
-                progressUpdate.sb.append(id).append(i * 100/ 10000).append("--");
-                // progressUpdate.postProgress(id, i * 100/ 10000);
+                // progressUpdate.sb.append(id).append(i * 100/ 10000).append("--");
+                progressUpdate.postProgress(id, i * 100/ 10000);
                 /*synchronized (progressUpdate) {
                     progressUpdate.sb.append(id).append(i * 100/ 10000).append("--");
                 }*/

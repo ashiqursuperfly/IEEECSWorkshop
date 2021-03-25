@@ -1,28 +1,43 @@
-strings/StringBuilders.java
- strings.StringBuilders
-threads/WorkerWithSharedResource.java
- threads.Progress
- threads.ThreadSyncDemo
- threads.WorkerWithSharedResource
-collections/Movie.java
- collections.Movie
+movie_app/util/models/RatingsItem.java
+ movie_app.util.models.RatingsItem
+movie_app/util/ApiService.java
+ movie_app.util.ApiService
+threads/WorkerWithNoSharedResource.java
+ threads.ThreadDemo
+ threads.WorkerWithNoSharedResource
+movie_app/util/models/MovieData.java
+ movie_app.util.models.MovieData
+movie_app/util/models/SearchItem.java
+ movie_app.util.models.SearchItem
+Misc.java
+ Misc
 strings/Strings.java
  strings.Strings
+movie_app/util/models/SearchApiResponse.java
+ movie_app.util.models.SearchApiResponse
+exceptions/CommonExceptions.java
+ exceptions.CommonExceptions
+movie_app/util/MovieApp.java
+ movie_app.util.MovieApp
+strings/StringImmutability.java
+ strings.Main
+ strings.MyVeryImportantDatabase
+ strings.StringImmutability
 exceptions/PasswordValidator.java
  exceptions.InvalidPasswordCharsException
  exceptions.InvalidPasswordLengthException
  exceptions.PasswordValidator
-Misc.java
- Misc
+strings/StringBuilders.java
+ strings.StringBuilders
+movie_app/util/ApiClient.java
+ movie_app.util.ApiClient
+collections/Movie.java
+ collections.Movie
 collections/HashDs.java
  collections.HashDs
-exceptions/CommonExceptions.java
- exceptions.CommonExceptions
-strings/StringImmutability.java
- strings.MyVeryImportantDatabase
- strings.StringImmutability
 collections/Basic.java
  collections.Basic
-threads/WorkerWithNoSharedResource.java
- threads.ThreadDemo
- threads.WorkerWithNoSharedResource
+threads/WorkerWithSharedResource.java
+ threads.Progress
+ threads.ThreadSyncDemo
+ threads.WorkerWithSharedResource

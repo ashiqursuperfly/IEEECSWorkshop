@@ -16,13 +16,14 @@ class MyVeryImportantDatabase {
     }
 
     public boolean securityCheck(String userName, String balance) {
+        // some logic
         return true;
     }
 }
 
 public class StringImmutability {
 
-    void updateUserBalance(String userName, String balance) {
+    static void updateUserBalance(String userName, String balance) {
 
         MyVeryImportantDatabase db = MyVeryImportantDatabase.getInstance();
 
@@ -30,5 +31,12 @@ public class StringImmutability {
             db.executeSQL("UPDATE Customers SET balance ="+ balance + " WHERE UserName = '" + userName + "'"); // sql-injection vulnerability avoided due to String Immutability
         }
 
+    }
+}
+
+class Main {
+    public static void main(String[] args) {
+        String userName = "ashiq";
+        StringImmutability.updateUserBalance(userName, "3213123");
     }
 }
