@@ -1,8 +1,9 @@
 strings/StringBuilders.java
  strings.StringBuilders
-threads/WorkerWithNoSharedResource.java
- threads.ThreadDemo
- threads.WorkerWithNoSharedResource
+threads/WorkerWithSharedResource.java
+ threads.Progress
+ threads.ThreadSyncDemo
+ threads.WorkerWithSharedResource
 collections/Movie.java
  collections.Movie
 strings/Strings.java
@@ -22,7 +23,6 @@ strings/StringImmutability.java
  strings.StringImmutability
 collections/Basic.java
  collections.Basic
-threads/WorkerWithSharedResource.java
- threads.Progress
- threads.ThreadSyncDemo
- threads.WorkerWithSharedResource
+threads/WorkerWithNoSharedResource.java
+ threads.ThreadDemo
+ threads.WorkerWithNoSharedResource
